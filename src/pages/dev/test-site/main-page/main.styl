@@ -427,36 +427,8 @@ a:hover
   border-radius: 10px
   box-shadow: black 1px 0 10px
 
-.location-card
-  display: grid
-  grid-template-columns: 50% 50%
-  grid-template-rows: 30vh
-  
-  .link-title
-    display: grid
-    margin: auto
-    margin-left: 10%
-    font-size: 35px
-    
-    a
-      color: black
 
-  p
-    color: black
-    font-size: 16px
 
-  h1
-    color: black
-  
-  .card-image
-    height: 30vh
-    width: 100%
-
-  .top
-    border-radius: 10px 0 0 0
-  
-  .bottom
-    border-radius: 0 0 10px 0
 
 .location-text 
   h1
@@ -528,3 +500,56 @@ a:hover
   h2
     color: black
     margin-top: 0
+
+.scroller
+  width: 60%
+  margin-left: 20%
+
+.scroller__inner
+  display flex
+
+.scroller[data-animated="true"]
+  overflow hidden
+  -webkit-mask linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  )
+  mask linear-gradient(90deg, transparent, white 20%, white 80%, transparent)
+  .scroller__inner
+    width 500%
+    flex-wrap nowrap
+    animation scroll var(--_animation-duration, 60s)
+    var(--_animation-direction, forwards) linear infinite
+
+.scroller[data-direction="left"]
+  --_animation-direction forwards
+
+.scroller[data-speed="slow"]
+  --_animation-duration 60s
+
+@keyframes scroll
+  to 
+    transform translate(calc(-50%))
+
+.tag-list
+  color: black
+  margin 0
+  padding-inline 0
+  list-style none
+  li
+    padding 1rem
+
+.location-card
+  border-radius: 10px
+  box-shadow: black 1px 0 10px
+  height: 80vh
+  margin: 0 2%
+
+.card-image
+  height: 40vh
+  width: 100%
+  object-fit: cover
+  border-radius: 10px 10px 0 0
