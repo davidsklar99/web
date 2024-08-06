@@ -44,23 +44,31 @@ import { MacrostratIcon } from "~/components";
 
 [//]: # "Map Interface"
 <div class="map-card card">
-  <p>
-    <div class="map-element">With over 225 maps from data providers around the world across every scale, Macrostrat is the world's largest homogenized geologic map database. Our data processing pipeline links geologic map polygons to Macrostrat column polygons, external stratigraphic name lexicons, and geochronological intervals, enabling the enhancement of the original map data and allowing for direct links into <a href="https://xdd.wisc.edu" target="_blank">xDD</a> (formly GeoDeepDive).</div>
-    \
-    <div class="map-element">Are you affiliated with a state or national geologic survey? <a href="mailto:contact@macrostrat.org?Subject=Geologic%20Map%20Collaboration">Get in touch</a> with us - we'd love to collaborate and help publicize your maps!</div>
-    \
-    <div class="map-element"> Get started by <a href="/map">exploring the map</a> or <a href="/map/sources">taking a look at</a> which maps are currently a part of Macrostrat.</div>
-    <div class="buttons1">
-      <a type="button" class="btn" href="/map/#3/40.78/-94.13">Geologic Map</a>
-      <a type="button" class="btn" href="/sift/#/">Search</a>
+  <Image src="stars.png" width="100%" className="stars-img"></Image>
+  <div class="map-content">
+    <Image src="globe.png" width="100%" className="globe-img"></Image>
+    <div class="map-text">
+      <a type="button" class="btn" id="map-btn" href="/map/#3/40.78/-94.13">Geologic Map</a>
+      <p>
+        <div class="map-element">With over 225 maps from data providers around the world across every scale, Macrostrat is the world's largest homogenized geologic map database. Our data processing pipeline links geologic map polygons to Macrostrat column polygons, external stratigraphic name lexicons, and geochronological intervals, enabling the enhancement of the original map data and allowing for direct links into <a href="https://xdd.wisc.edu" target="_blank">xDD</a> (formly GeoDeepDive).</div>
+        \
+        <div class="map-element">Are you affiliated with a state or national geologic survey? <a href="mailto:contact@macrostrat.org?Subject=Geologic%20Map%20Collaboration">Get in touch</a> with us - we'd love to collaborate and help publicize your maps!</div>
+        \
+        <div class="map-element"> Get started by <a href="/map">exploring the map</a> or <a href="/map/sources">taking a look at</a> which maps are currently a part of Macrostrat.</div>
+      </p>
     </div>
-  </p>
+  </div>
 </div>
 
 [//]: # "Mobile"
 <div class="mobile-card card">
   <Image src="rockd.jpg" width="22px" className="rockd-png"></Image>
   <h1><a href="https://rockd.org" target="_blank">Go mobile!</a></h1>
+</div>
+
+[//]: # "Search"
+<div class="search-card card">
+  <a type="button" class="btn" href="/sift/#/">Search</a>
 </div>
 
 [//]: # "Locations"
